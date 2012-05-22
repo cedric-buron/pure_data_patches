@@ -1,0 +1,6 @@
+Sound Manglers, sound texture creators :
+Run the reflex_app_*.pd 
+import your audiofile, record, move some fader et voila .... 
+beware messy patches
+no externals required, vanilla pure data 
+contact : human.koala@gmail.com
