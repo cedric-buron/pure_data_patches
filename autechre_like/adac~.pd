@@ -1,0 +1,7 @@
+#N canvas 225 135 458 308 12;
+#X obj 71 27 inlet~;
+#X obj 168 29 inlet~;
+#X obj 82 118 throw~ L;
+#X obj 170 112 throw~ R;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
