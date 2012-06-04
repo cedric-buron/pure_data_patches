@@ -1,0 +1,28 @@
+#N canvas 422 164 648 468 10;
+#X obj 484 11 cnv 20 20 20 empty empty empty 20 12 0 14 -42246 -66577
+0;
+#X obj 484 31 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 484 51 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 505 31 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 526 11 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 526 31 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 526 51 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 574 11 cnv 20 20 20 empty empty empty 20 12 0 14 -42246 -66577
+0;
+#X obj 574 31 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 574 51 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 595 31 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 615 11 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 615 51 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X text 483 72 human.koala@gmail.com;

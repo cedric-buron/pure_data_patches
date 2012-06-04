@@ -1,0 +1,7 @@
+#N canvas 160 100 450 300 10;
+#X obj 150 23 inlet~ entrée_l;
+#X obj 150 279 outlet~ sortie_l;
+#X obj 276 23 inlet~ entrée_r;
+#X obj 276 279 outlet~ sortie_r;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;

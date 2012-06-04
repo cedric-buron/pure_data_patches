@@ -1,0 +1,10 @@
+#N canvas 337 383 1440 852 24;
+#X declare -lib cyclone;
+#X text -195 -604 PD <-> Equivalence Synthese Analo;
+#X obj 930 -602 import cyclone;
+#X text -163 -548 8) FM;
+#X obj -32 -463 audio/FM_synth;
+#X obj -14 -498 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 4 0 3 0;
+#X connect 4 0 3 1;
