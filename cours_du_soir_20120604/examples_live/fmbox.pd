@@ -1,5 +1,5 @@
-#N canvas 0 1 1268 748 12;
-#N canvas 0 0 454 304 vol 0;
+#N canvas 0 22 785 537 12;
+#N canvas 0 22 454 304 vol 0;
 #X obj 131 155 *~;
 #X obj 131 199 outlet~;
 #X obj 131 103 inlet~;
@@ -14,7 +14,7 @@
 #X restore 349 753 pd vol;
 #X obj 395 730 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
-#N canvas 0 0 490 340 envpitch 0;
+#N canvas 0 22 490 340 envpitch 0;
 #X obj 30 18 inlet;
 #X obj 30 135 vline~;
 #X obj 84 18 inlet pitch;
@@ -27,7 +27,7 @@
 #X connect 3 0 4 0;
 #X connect 5 0 1 0;
 #X restore 368 537 pd envpitch;
-#N canvas 0 0 502 352 oscMod 0;
+#N canvas 0 22 502 352 oscMod 0;
 #X obj 85 29 inlet;
 #X obj 149 29 inlet pitch;
 #X obj 143 234 osc~;
@@ -50,10 +50,10 @@
 #X connect 9 0 3 0;
 #X restore 349 510 pd oscMod;
 #X obj 454 488 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 7680 1;
 #X obj 451 512 mtof;
 #X obj 422 440 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 4400 1;
 #X obj 416 464 mtof;
 #X obj 349 439 t b b;
 #X obj 348 569 *~;
@@ -63,7 +63,7 @@
 #X obj 459 142 t f f f;
 #X msg 351 129 bang;
 #X obj 349 352 bang;
-#X obj 351 -61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 351 -61 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 351 3 t b b;
 #X obj 468 42 random 3;
@@ -79,7 +79,7 @@
 #X obj 919 324 f;
 #X obj 919 355 % 16;
 #X obj 953 323 + 0.5;
-#N canvas 358 230 486 570 snare 0;
+#N canvas 314 30 486 570 snare 0;
 #X obj 83 26 inlet;
 #X obj 132 298 noise~;
 #X obj 191 200 vline~;
@@ -110,7 +110,7 @@
 #X connect 12 0 2 0;
 #X restore 749 642 pd snare;
 #X obj 749 455 sel 0;
-#N canvas 0 0 474 324 bdrum 0;
+#N canvas 0 22 474 324 bdrum 0;
 #X obj 140 67 inlet;
 #X obj 140 211 osc~;
 #X obj 140 150 vline~;
@@ -149,25 +149,25 @@
 #X obj 281 569 vline~;
 #X msg 203 349 5;
 #X obj 80 382 + 48;
-#N canvas 358 230 498 348 hh 0;
+#N canvas 302 230 498 348 hh 1;
 #X obj 83 26 inlet;
 #X obj 115 153 noise~;
 #X obj 196 159 vline~;
 #X obj 114 183 *~;
 #X obj 112 295 outlet~;
 #X obj 194 195 *~;
-#X obj 110 239 hip~ 8000;
-#X obj 110 269 lop~ 9000;
 #X msg 196 126 0.75 \, 0 250;
-#X connect 0 0 8 0;
+#X obj 110 239 hip~ 8500;
+#X obj 110 269 lop~ 8600;
+#X connect 0 0 6 0;
 #X connect 1 0 3 0;
 #X connect 2 0 5 1;
 #X connect 2 0 5 0;
-#X connect 3 0 6 0;
+#X connect 3 0 7 0;
 #X connect 5 0 3 1;
-#X connect 6 0 7 0;
-#X connect 7 0 4 0;
-#X connect 8 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 8 0;
+#X connect 8 0 4 0;
 #X restore 919 643 pd hh;
 #X obj 919 617 sel 0;
 #N canvas 358 230 506 356 oh 0;
@@ -195,7 +195,7 @@
 #X obj 202 596 osc~;
 #X obj 329 641 *~;
 #X obj 202 482 - 24;
-#N canvas 0 0 792 750 pad 0;
+#N canvas 0 22 792 750 pad 0;
 #X obj 296 77 + 3;
 #X obj 343 78 + 7;
 #X obj 251 74 + 0;
@@ -299,7 +299,7 @@
 #X connect 29 0 23 0;
 #X restore 63 584 pd pad;
 #X obj 831 705 +~;
-#N canvas 0 0 454 304 vol 0;
+#N canvas 0 22 454 304 vol 0;
 #X obj 131 155 *~;
 #X obj 131 199 outlet~;
 #X obj 131 103 inlet~;
@@ -313,7 +313,7 @@
 #X connect 5 0 3 0;
 #X restore 829 748 pd vol;
 #X obj 875 725 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 7900 1;
 #X obj 600 814 dac~;
 #X msg 203 540 \$1 125;
 #X obj 352 -28 metro 500;
@@ -329,11 +329,11 @@
 #X obj 49 235 sel 1;
 #X obj 420 404 random 96;
 #X obj 329 697 *~;
-#N canvas 0 0 506 356 envAmp 0;
+#N canvas 0 22 506 356 envAmp 0;
 #X obj 30 18 inlet;
 #X obj 30 135 vline~;
 #X obj 30 197 outlet~;
-#X msg 31 90 0.5 \, 0 750;
+#X msg 31 90 0.5 \, 0 950;
 #X connect 0 0 3 0;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
@@ -490,7 +490,6 @@
 #X connect 52 0 90 0;
 #X connect 53 0 62 0;
 #X connect 54 0 53 0;
-#X connect 55 0 62 0;
 #X connect 56 0 66 0;
 #X connect 57 0 58 0;
 #X connect 58 0 59 0;
@@ -524,8 +523,6 @@
 #X connect 81 0 54 0;
 #X connect 82 0 83 0;
 #X connect 82 0 84 0;
-#X connect 83 0 62 0;
-#X connect 84 0 62 0;
 #X connect 85 0 27 0;
 #X connect 86 0 89 0;
 #X connect 87 0 86 0;

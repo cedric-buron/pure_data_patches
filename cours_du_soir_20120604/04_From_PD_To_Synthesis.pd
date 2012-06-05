@@ -1,4 +1,4 @@
-#N canvas 0 22 1440 852 24;
+#N canvas 0 22 785 537 24;
 #X declare -lib cyclone;
 #X text -195 -604 PD <-> Equivalence Synthese Analo;
 #X obj 930 -602 import cyclone;
@@ -39,7 +39,7 @@
 #X text 478 -492 synchro du lfo;
 #X obj 944 5 vd~ del;
 #X obj 941 -46 vline~;
-#X obj 784 179 delwrite~ del 4000;
+#X obj 776 181 delwrite~ del 4000;
 #X obj 895 102 *~ 0.5;
 #X text 833 -410 7) "analog" delay;
 #X obj 841 -216 *~;
@@ -50,11 +50,11 @@
 #X obj 585 121 +~;
 #X obj 938 -105 pack f f;
 #X obj 938 -207 hsl 128 15 20 4000 0 0 empty empty time -2 -8 0 10
--262144 -1 -1 5800 1;
+-262144 -1 -1 3600 1;
 #X obj 963 -179 t f f;
 #X obj 845 -165 *~ 0.5;
 #X obj 956 60 hsl 128 15 0 1 0 0 empty empty feedback -2 -8 0 10 -262144
--1 -1 7900 1;
+-1 -1 2000 1;
 #X connect 4 0 7 0;
 #X connect 5 0 3 0;
 #X connect 7 0 3 0;

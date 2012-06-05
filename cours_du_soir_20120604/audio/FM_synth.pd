@@ -1,4 +1,4 @@
-#N canvas 174 51 1035 726 12;
+#N canvas 0 22 785 537 12;
 #X obj 262 503 simpleFM~;
 #X obj 242 529 *~;
 #X obj 235 17 inlet;
@@ -17,7 +17,7 @@
 #X obj 346 385 ad_env~ 0 700;
 #X obj 10 6 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
-#X obj 605 200 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 605 200 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 599 259 timer;
 #X obj 599 234 sel 0 1;
@@ -29,8 +29,8 @@
 #X obj 346 430 *~ 1000;
 #X obj 295 218 random 5;
 #X obj 445 351 * 2;
-#X obj 688 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 17
-17;
+#X obj 688 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 15
+15;
 #X obj 629 297 pack f f;
 #X obj 688 269 timer;
 #X obj 688 244 sel 0 1;
@@ -50,22 +50,26 @@
 #X obj 129 477 /~ 4;
 #X obj 293 558 delwrite~ \$0-del 4000;
 #X obj 539 386 vd~ \$0-del;
-#X obj 297 691 dac~;
 #X obj 688 195 ../controle/cpt 32;
 #X obj 150 606 *~ 0.25;
 #X obj 263 595 *~ 0.25;
-#X obj 320 649 *~ 0.25;
-#X obj 433 638 *~ 0.25;
+#X obj 326 625 *~ 0.25;
+#X obj 430 615 *~ 0.25;
+#X obj 225 687 tanh~;
+#X obj 278 666 +~;
+#X obj 340 668 +~;
+#X obj 327 693 tanh~;
+#X obj 220 728 dac~;
 #X connect 0 0 1 1;
 #X connect 1 0 46 0;
+#X connect 1 0 49 0;
 #X connect 1 0 50 0;
-#X connect 1 0 51 0;
 #X connect 2 0 3 0;
 #X connect 3 0 14 0;
 #X connect 3 1 15 0;
 #X connect 3 1 17 0;
 #X connect 3 1 26 0;
-#X connect 3 1 49 0;
+#X connect 3 1 48 0;
 #X connect 3 2 4 0;
 #X connect 4 0 0 0;
 #X connect 5 0 0 1;
@@ -113,8 +117,8 @@
 #X connect 34 0 47 0;
 #X connect 35 0 36 0;
 #X connect 36 0 37 1;
-#X connect 37 0 52 0;
-#X connect 38 0 53 0;
+#X connect 37 0 51 0;
+#X connect 38 0 52 0;
 #X connect 39 0 1 0;
 #X connect 40 0 33 1;
 #X connect 41 0 37 0;
@@ -125,9 +129,13 @@
 #X connect 45 0 39 0;
 #X connect 47 0 41 0;
 #X connect 47 0 42 0;
-#X connect 49 0 28 0;
-#X connect 50 0 48 0;
-#X connect 51 0 48 1;
-#X connect 52 0 48 0;
-#X connect 53 0 48 1;
+#X connect 48 0 28 0;
+#X connect 49 0 54 0;
+#X connect 50 0 55 1;
+#X connect 51 0 55 0;
+#X connect 52 0 54 1;
+#X connect 53 0 57 0;
+#X connect 54 0 53 0;
+#X connect 55 0 56 0;
+#X connect 56 0 57 1;
 #X coords 0 -1 1 1 85 60 1 0 0;
