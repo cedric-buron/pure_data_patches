@@ -1,0 +1,26 @@
+From Analog Synthesis To Pd And Vice Versa 
+
+I) Introduction 
+	a) Synthèse Analogique 
+	b) L'ordinateur comme outil musical (Numérique Vs Analogique : The Big Fight)
+	c) Différence - Similarité - Apport
+
+II) Imiter Les Fonctionnalités d'un analo sous pure data 
+	a) VCO/FM/LFO/Enveloppe
+	b) VCA/Filter/Ring Modulator/Waveshaping/Filter/Analog Delay 
+	c) exemple : Kick/FM synth/Analog Synth
+
+III) Évènements Musicaux Sous Pure Data
+	a) Générations d'évènements
+	c) traitement d'évènements
+	b) Automation
+
+IV) Traitements de signaux Extérieurs 
+	a) enregistrement/Lecture de samples 
+	b) générer des événements à partir d'une source externe (pitch, déclenchement de note)
+	c) enveloppe follower
+	d) contrôle externe (midi/trig/synchro) 
+
+V) Mélanger tout ça ... 
+
+	ex : petit live avec un patch (cf apéro) et explication de patch

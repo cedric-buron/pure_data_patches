@@ -1,0 +1,16 @@
+#N canvas 500 185 192 236 12;
+#X obj 35 179 osc~;
+#X obj 36 206 outlet~;
+#X obj 50 110 *~;
+#X obj 36 145 +~;
+#X obj 51 76 osc~;
+#X obj 36 17 inlet~;
+#X obj 50 45 inlet~;
+#X obj 113 44 inlet~;
+#X connect 0 0 1 0;
+#X connect 2 0 3 1;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X connect 7 0 2 1;

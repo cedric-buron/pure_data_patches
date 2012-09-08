@@ -1,0 +1,14 @@
+#N canvas 323 174 462 546 12;
+#X obj 14 194 osc~ 220;
+#X obj 13 166 +~;
+#X obj 31 142 *~;
+#X obj 15 222 outlet~;
+#X obj 14 13 inlet~ main_pitch;
+#X obj 31 66 inlet~ mod_pitch;
+#X obj 50 101 inlet~ mod_amount;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 1;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 1;

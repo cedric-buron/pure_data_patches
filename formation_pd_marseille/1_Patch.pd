@@ -1,0 +1,43 @@
+#N canvas 360 22 732 748 10;
+#X obj 265 326 cnv 15 100 200 empty empty Enveloppe 20 12 0 14 -4034
+-66577 0;
+#X obj 77 349 cnv 15 140 200 empty empty Oscillateurs 20 12 0 14 -257985
+-66577 0;
+#X obj 109 444 phasor~;
+#X obj 175 444 osc~;
+#X obj 172 477 /~ 2;
+#X obj 116 533 /~ 8;
+#X obj 81 408 +~ 0.2;
+#X obj 171 410 -~ 0.2;
+#X obj 135 657 audio/output~;
+#X obj 287 382 line;
+#X obj 264 493 *;
+#X obj 252 304 *;
+#X obj 112 480 -~ 0.5;
+#X obj 106 504 *~ 2;
+#X obj 151 619 vcf~ 20;
+#X msg 284 352 1 \, 0.15 250;
+#X obj 162 236 mtof;
+#X obj 434 134 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4500 1;
+#X msg 139 136 55;
+#X connect 2 0 12 0;
+#X connect 3 0 4 0;
+#X connect 4 0 14 0;
+#X connect 5 0 14 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 9 0 10 0;
+#X connect 10 0 14 1;
+#X connect 11 0 10 1;
+#X connect 12 0 13 0;
+#X connect 13 0 5 0;
+#X connect 14 0 8 0;
+#X connect 14 0 8 1;
+#X connect 15 0 9 0;
+#X connect 16 0 6 0;
+#X connect 16 0 7 0;
+#X connect 16 0 15 0;
+#X connect 16 0 11 0;
+#X connect 17 0 11 1;
+#X connect 18 0 16 0;

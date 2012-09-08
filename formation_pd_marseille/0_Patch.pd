@@ -1,0 +1,21 @@
+#N canvas 453 76 622 615 10;
+#X msg 144 -14 55;
+#X obj 80 33 cnv 15 140 200 empty empty Oscillateurs 20 12 0 14 -257985
+-66577 0;
+#X obj 112 128 phasor~;
+#X obj 178 128 osc~;
+#X obj 175 161 /~ 2;
+#X obj 113 161 /~ 8;
+#X obj 84 92 +~ 0.2;
+#X obj 174 94 -~ 0.2;
+#X obj 110 533 audio/output~;
+#X connect 0 0 6 0;
+#X connect 0 0 7 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 8 0;
+#X connect 4 0 8 1;
+#X connect 5 0 8 0;
+#X connect 5 0 8 1;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
