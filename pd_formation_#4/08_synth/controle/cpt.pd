@@ -1,0 +1,18 @@
+#N canvas 213 117 454 300 12;
+#X obj 227 98 f;
+#X obj 275 100 + 1;
+#X obj 227 161 outlet;
+#X msg 246 68 0;
+#X obj 227 130 % \$1;
+#X obj 36 38 inlet trig;
+#X obj 133 39 inlet modulo;
+#X obj 246 40 inlet reset;
+#X connect 0 0 1 0;
+#X connect 0 0 4 0;
+#X connect 1 0 0 1;
+#X connect 3 0 0 1;
+#X connect 3 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 1;
+#X connect 7 0 3 0;

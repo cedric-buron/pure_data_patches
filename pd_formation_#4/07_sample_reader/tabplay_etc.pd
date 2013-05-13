@@ -1,0 +1,11 @@
+#N canvas 192 96 793 726 10;
+#X obj 474 301 table mySmp 44100;
+#X obj 224 303 tabplay~ mySmp;
+#X obj 377 203 soundfiler;
+#X msg 143 125 bang;
+#X obj 200 443 dac~;
+#X msg 224 80 read -resize snare.wav mySmp;
+#X connect 1 0 4 0;
+#X connect 1 0 4 1;
+#X connect 3 0 1 0;
+#X connect 5 0 2 0;

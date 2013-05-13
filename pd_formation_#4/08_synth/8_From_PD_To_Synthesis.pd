@@ -1,0 +1,95 @@
+#N canvas 0 22 785 537 24;
+#X declare -lib cyclone;
+#X text -195 -604 PD <-> Equivalence Synthese Analo;
+#X obj 930 -602 import cyclone;
+#X text -191 -531 4) "analog" distortion;
+#X obj 59 -402 Scope~ 147 104 256 3 100 -1 1 0 0 0 0 102 255 51 135
+135 135 0;
+#X obj -181 -482 osc~ 2;
+#X msg 24 -462 bufsize 100;
+#X obj 67 -266 Scope~ 131 112 256 3 100 -1 1 0 0 0 0 102 255 51 135
+135 135 0;
+#X obj -181 -413 *~ 1;
+#X obj -143 -438 hsl 128 15 0.5 8 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj -181 -326 /~ 1;
+#X obj -181 -370 tanh~;
+#X obj 344 -244 Scope~ 147 104 256 3 100 -1 1 0 0 0 0 102 255 51 135
+135 135 0;
+#X text 329 -531 5) lfo = osc basse fréquence;
+#X obj 382 -294 osc~;
+#X obj 331 -489 cnv 15 100 100 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 345 -428 osc~;
+#X obj 374 -385 *~ 200;
+#X obj 381 -343 +~ 200;
+#X msg 345 -474 0.2;
+#X text -122 -102 6) env follower;
+#X obj 186 71 *~;
+#X obj 286 -7 vline~;
+#X obj 160 -7 osc~ 440;
+#X obj 327 134 Scope~ 147 104 256 3 100 -1 1 0 0 0 0 102 255 51 135
+135 135 0;
+#X obj 10 163 sig~;
+#X msg 293 -59 1 \, 0 400;
+#X obj -36 -3 lop~ 10;
+#X obj -28 78 env~;
+#X obj -23 119 / 100;
+#X msg 478 -453 0;
+#X text 478 -492 synchro du lfo;
+#X obj 944 5 vd~ del;
+#X obj 941 -46 vline~;
+#X obj 776 181 delwrite~ del 4000;
+#X obj 895 102 *~ 0.5;
+#X text 833 -410 7) "analog" delay;
+#X obj 841 -216 *~;
+#X obj 967 -289 vline~;
+#X obj 841 -289 osc~ 440;
+#X msg 974 -341 1 \, 0 400;
+#X obj 586 171 dac~;
+#X obj 585 121 +~;
+#X obj 938 -105 pack f f;
+#X obj 938 -207 hsl 128 15 20 4000 0 0 empty empty time -2 -8 0 10
+-262144 -1 -1 3600 1;
+#X obj 963 -179 t f f;
+#X obj 845 -165 *~ 0.5;
+#X obj 956 60 hsl 128 15 0 1 0 0 empty empty feedback -2 -8 0 10 -262144
+-1 -1 2000 1;
+#X connect 4 0 7 0;
+#X connect 5 0 3 0;
+#X connect 7 0 3 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 1;
+#X connect 9 0 6 0;
+#X connect 10 0 9 0;
+#X connect 13 0 11 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 13 0;
+#X connect 18 0 15 0;
+#X connect 20 0 26 0;
+#X connect 21 0 20 1;
+#X connect 22 0 20 0;
+#X connect 24 0 23 0;
+#X connect 25 0 21 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 24 0;
+#X connect 29 0 15 1;
+#X connect 31 0 34 0;
+#X connect 31 0 41 1;
+#X connect 32 0 31 0;
+#X connect 34 0 33 0;
+#X connect 36 0 45 0;
+#X connect 37 0 36 1;
+#X connect 38 0 36 0;
+#X connect 39 0 37 0;
+#X connect 41 0 40 0;
+#X connect 41 0 40 1;
+#X connect 42 0 32 0;
+#X connect 43 0 44 0;
+#X connect 44 0 42 0;
+#X connect 44 1 42 1;
+#X connect 45 0 41 0;
+#X connect 45 0 33 0;
+#X connect 46 0 34 1;

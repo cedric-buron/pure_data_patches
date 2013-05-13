@@ -1,4 +1,4 @@
-#N canvas 0 22 1010 584 10;
+#N canvas 312 301 1010 584 10;
 #X obj 297 111 step_seq;
 #X obj 178 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -10,6 +10,21 @@
 #X obj 201 110 step_seq;
 #X obj 397 110 step_seq;
 #X obj 499 110 step_seq;
+#X obj 485 325 delay;
+#X obj 482 364 spigot;
+#X obj 565 330 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 448 250 bang;
+#X obj 525 284 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 500 256;
+#X msg 572 362 bang;
+#X obj 460 414 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 569 420 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 790 188 bang;
+#X msg 850 191 bang;
+#X obj 742 144 un_pas;
 #X connect 0 0 8 0;
 #X connect 0 1 4 0;
 #X connect 1 0 7 0;
@@ -24,3 +39,12 @@
 #X connect 8 1 4 0;
 #X connect 9 0 7 0;
 #X connect 9 1 4 0;
+#X connect 10 0 11 0;
+#X connect 10 0 15 0;
+#X connect 11 0 16 0;
+#X connect 12 0 11 1;
+#X connect 13 0 10 0;
+#X connect 14 0 10 1;
+#X connect 15 0 17 0;
+#X connect 20 0 18 0;
+#X connect 20 1 19 0;
