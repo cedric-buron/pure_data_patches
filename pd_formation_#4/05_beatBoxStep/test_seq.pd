@@ -1,0 +1,18 @@
+#N canvas 319 70 1010 584 10;
+#X obj 163 21 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 269 269 hihat;
+#X obj 272 241 bang;
+#X obj 324 244 bang;
+#X obj 154 507 dac~;
+#X obj 153 468 *~ 1;
+#X obj 193 62 step_seq;
+#X obj 288 62 step_seq;
+#X connect 0 0 6 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 5 0 4 0;
+#X connect 5 0 4 1;
+#X connect 6 1 2 0;
+#X connect 7 1 3 0;
