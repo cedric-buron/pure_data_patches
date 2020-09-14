@@ -1,0 +1,322 @@
+#N canvas 937 59 441 446 12;
+#X obj 4 125 cnv 15 420 300 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 304 151 vsl 15 128 0 127 0 0 param1 rcv1 trax_control 0 -9 1
+10 -258699 -1 -1 11600 1;
+#X obj 324 151 vsl 15 128 0 127 0 0 param2 rcv2 empty 0 -9 0 10 -262144
+-1 -1 2600 1;
+#X obj 344 151 vsl 15 128 0 127 0 0 param3 rcv3 empty 0 -9 0 10 -233017
+-1 -1 11500 1;
+#X obj 364 151 vsl 15 128 0 127 0 0 param4 rcv4 empty 0 -9 0 10 -90881
+-1 -1 7900 1;
+#X obj 304 291 vsl 15 128 0 127 0 0 param5 rcv5 empty 0 -9 0 10 -258699
+-1 -1 1400 1;
+#X obj 324 291 vsl 15 128 0 127 0 0 param6 rcv6 empty 0 -9 0 10 -262144
+-1 -1 6800 1;
+#X obj 344 291 vsl 15 128 0 127 0 0 param7 rcv7 empty 0 -9 0 10 -233017
+-1 -1 4900 1;
+#X obj 364 291 vsl 15 128 0 127 0 0 param8 rcv8 empty 0 -9 0 10 -90881
+-1 -1 0 1;
+#N canvas 436 150 1004 618 mono_out 0;
+#X obj 107 381 ctlout 48 1;
+#X obj 107 313 r param1;
+#X obj 207 313 r param2;
+#X obj 207 381 ctlout 49 1;
+#X obj 307 313 r param3;
+#X obj 407 313 r param4;
+#X obj 507 313 r param5;
+#X obj 607 313 r param6;
+#X obj 707 313 r param7;
+#X obj 807 313 r param8;
+#X obj 307 381 ctlout 50 1;
+#X obj 407 381 ctlout 51 1;
+#X obj 507 381 ctlout 52 1;
+#X obj 607 381 ctlout 53 1;
+#X obj 707 381 ctlout 54 1;
+#X obj 807 381 ctlout 55 1;
+#X obj 376 508 pack f f f f f f f f;
+#X msg 376 534 set \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8;
+#X obj 705 32 + 1;
+#X obj 704 7 inlet mid_channel;
+#X obj 378 14 r npage_synth;
+#X obj 327 64 + 1;
+#X obj 357 64 + 2;
+#X obj 387 64 + 3;
+#X obj 417 64 + 4;
+#X obj 447 63 + 5;
+#X obj 478 63 + 6;
+#X obj 507 63 + 7;
+#X msg 705 86 set \$1;
+#X obj 705 112 s trxnbr;
+#X obj 704 61 makefilename Trax_%d;
+#X obj 297 64 + 0;
+#X obj 549 507 s nparam;
+#X obj 296 549 print;
+#X connect 1 0 0 0;
+#X connect 1 0 16 0;
+#X connect 1 0 32 0;
+#X connect 2 0 3 0;
+#X connect 2 0 16 1;
+#X connect 2 0 32 0;
+#X connect 4 0 10 0;
+#X connect 4 0 16 2;
+#X connect 4 0 32 0;
+#X connect 5 0 11 0;
+#X connect 5 0 16 3;
+#X connect 5 0 32 0;
+#X connect 6 0 12 0;
+#X connect 6 0 16 4;
+#X connect 6 0 32 0;
+#X connect 7 0 13 0;
+#X connect 7 0 16 5;
+#X connect 7 0 32 0;
+#X connect 8 0 14 0;
+#X connect 8 0 16 6;
+#X connect 8 0 32 0;
+#X connect 9 0 15 0;
+#X connect 9 0 16 7;
+#X connect 9 0 32 0;
+#X connect 16 0 17 0;
+#X connect 16 0 33 0;
+#X connect 18 0 0 2;
+#X connect 18 0 3 2;
+#X connect 18 0 11 2;
+#X connect 18 0 10 2;
+#X connect 18 0 12 2;
+#X connect 18 0 13 2;
+#X connect 18 0 14 2;
+#X connect 18 0 15 2;
+#X connect 18 0 30 0;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;
+#X connect 20 0 22 0;
+#X connect 20 0 23 0;
+#X connect 20 0 24 0;
+#X connect 20 0 25 0;
+#X connect 20 0 26 0;
+#X connect 20 0 27 0;
+#X connect 20 0 31 0;
+#X connect 21 0 3 1;
+#X connect 22 0 10 1;
+#X connect 23 0 11 1;
+#X connect 24 0 12 1;
+#X connect 25 0 13 1;
+#X connect 26 0 14 1;
+#X connect 27 0 15 1;
+#X connect 28 0 29 0;
+#X connect 30 0 28 0;
+#X connect 31 0 0 1;
+#X restore 15 179 pd mono_out;
+#X obj 15 151 hradio 20 1 0 6 empty empty trax_number 0 -8 1 10 -262144
+-1 -1 0;
+#N canvas 681 97 478 605 randomize_synth 0;
+#X obj 11 7 inlet;
+#X obj 12 191 random 127;
+#X obj 12 92 until;
+#X msg 12 61 8;
+#X obj 12 122 f;
+#X obj 52 122 + 1;
+#X msg 60 91 0;
+#X obj 11 35 t b b;
+#X obj 47 222 + 1;
+#X obj 12 253 pack f f;
+#X obj 212 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 12 321 spigot;
+#X obj 12 152 t b f f;
+#X obj 31 555 table r_p 8;
+#X msg 212 458 \; r_p 0 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9;
+#X obj 212 425 pack f f f f f f f f f;
+#X obj 212 165 t b f;
+#X obj 232 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 232 195 t b f;
+#X obj 252 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 252 225 t b f;
+#X obj 272 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 272 255 t b f;
+#X obj 212 136 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 292 165 t b f;
+#X obj 232 136 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 312 195 t b f;
+#X obj 252 136 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 332 225 t b f;
+#X obj 272 136 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 352 255 t b f;
+#X obj 64 285 tabread r_p;
+#X msg 284 47 0;
+#X obj 284 19 inlet freeze;
+#X obj 95 384 makefilename rcv%d;
+#X obj 18 349 unpack f f;
+#X obj 18 421 pack f s;
+#X obj 67 523 print;
+#X msg 18 457 \; \$2 \$1;
+#X connect 0 0 7 0;
+#X connect 1 0 9 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 0 12 0;
+#X connect 5 0 4 1;
+#X connect 6 0 4 1;
+#X connect 7 0 3 0;
+#X connect 7 1 6 0;
+#X connect 8 0 9 1;
+#X connect 9 0 11 0;
+#X connect 10 0 16 0;
+#X connect 11 0 35 0;
+#X connect 12 0 1 0;
+#X connect 12 1 8 0;
+#X connect 12 2 31 0;
+#X connect 15 0 14 0;
+#X connect 16 0 15 0;
+#X connect 16 1 15 1;
+#X connect 17 0 18 0;
+#X connect 18 0 15 0;
+#X connect 18 1 15 2;
+#X connect 19 0 20 0;
+#X connect 20 0 15 0;
+#X connect 20 1 15 3;
+#X connect 21 0 22 0;
+#X connect 22 0 15 0;
+#X connect 22 1 15 4;
+#X connect 23 0 24 0;
+#X connect 24 0 15 0;
+#X connect 24 1 15 5;
+#X connect 25 0 26 0;
+#X connect 26 0 15 0;
+#X connect 26 1 15 6;
+#X connect 27 0 28 0;
+#X connect 28 0 15 0;
+#X connect 28 1 15 7;
+#X connect 29 0 30 0;
+#X connect 30 0 15 0;
+#X connect 30 1 15 8;
+#X connect 31 0 11 1;
+#X connect 32 0 10 0;
+#X connect 32 0 17 0;
+#X connect 32 0 19 0;
+#X connect 32 0 21 0;
+#X connect 32 0 23 0;
+#X connect 32 0 25 0;
+#X connect 32 0 27 0;
+#X connect 32 0 29 0;
+#X connect 33 0 32 0;
+#X connect 34 0 36 1;
+#X connect 35 0 36 0;
+#X connect 35 1 34 0;
+#X connect 36 0 38 0;
+#X connect 36 0 37 0;
+#X coords 0 -1 1 1 100 60 2 200 100;
+#X restore 174 271 pd randomize_synth;
+#X obj 174 212 bng 30 250 50 0 empty empty randomize_parameters 0 -10
+1 10 -258699 -1 -1;
+#X obj 267 233 bng 30 250 50 0 empty empty freeze 0 -10 1 10 -90881
+-1 -1;
+#X obj 4 -5 cnv 15 420 125 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 6 77 Randomize the parameters checked with the red button;
+#X text 6 30 Select the Synth-trax you want to modify;
+#X obj 14 341 cnv 20 20 20 empty empty empty 20 12 0 14 -42246 -66577
+0;
+#X obj 14 361 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 14 381 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 35 361 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 56 341 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 56 361 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 56 381 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 104 341 cnv 20 20 20 empty empty empty 20 12 0 14 -42246 -66577
+0;
+#X obj 104 361 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 104 381 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 125 361 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 145 341 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 145 381 cnv 20 20 20 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X text 5 93 Tweak the settings with the sliders;
+#X text 13 402 human.koala@gmail.com;
+#X obj 15 203 vradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#N canvas 80 218 554 600 select_pagesynth 0;
+#X obj 30 18 inlet mid_channel;
+#X obj 30 50 sel 0 1 2 3 4 5 6;
+#X msg 30 77 48;
+#X msg 49 107 56;
+#X msg 68 136 72;
+#X msg 85 166 80;
+#X msg 105 196 88;
+#X msg 124 223 104;
+#X msg 142 253 112;
+#X obj 31 302 s npage_synth;
+#X msg 214 193 Amplification;
+#X msg 213 169 Synthesis;
+#X msg 214 219 Filter;
+#X msg 215 247 Effects;
+#X msg 216 277 LFO1;
+#X msg 216 305 LFO2;
+#X msg 217 332 LFO3;
+#X obj 381 437 s page;
+#X msg 381 411 set \$1;
+#X obj 381 386 symbol;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 0 11 0;
+#X connect 1 1 3 0;
+#X connect 1 1 10 0;
+#X connect 1 2 4 0;
+#X connect 1 2 12 0;
+#X connect 1 3 5 0;
+#X connect 1 3 13 0;
+#X connect 1 4 6 0;
+#X connect 1 4 14 0;
+#X connect 1 5 7 0;
+#X connect 1 5 15 0;
+#X connect 1 6 8 0;
+#X connect 1 6 16 0;
+#X connect 2 0 9 0;
+#X connect 3 0 9 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 0;
+#X connect 8 0 9 0;
+#X connect 10 0 19 0;
+#X connect 11 0 19 0;
+#X connect 12 0 19 0;
+#X connect 13 0 19 0;
+#X connect 14 0 19 0;
+#X connect 15 0 19 0;
+#X connect 16 0 19 0;
+#X connect 18 0 17 0;
+#X connect 19 0 18 0;
+#X restore 15 314 pd select_pagesynth;
+#X obj 169 149 cnv 15 130 40 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X symbolatom 172 172 15 0 0 0 - page -;
+#X symbolatom 172 152 10 0 0 0 - trxnbr -;
+#X text 34 200 page select;
+#X floatatom 373 131 5 0 0 0 - nparam -;
+#X text 7 -2 MONOMACHINE SYNTH RANDOMIZER;
+#X text 6 14 This little patch randomize page parameters;
+#X text 6 46 Select the Synth-page you want to modify;
+#X text 6 62 Check the parameter numbers you want to randomize;
+#X connect 10 0 9 0;
+#X connect 12 0 11 0;
+#X connect 13 0 11 1;
+#X connect 32 0 33 0;
